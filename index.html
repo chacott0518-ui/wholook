@@ -88,14 +88,14 @@
 </head>
   <body>
     <div id="root"></div>
+    <div id="root"></div>
     <script type="module">
-    const { createRoot } = await import('react-dom/client');
-    const { default: React } = await import('react');
-    const { default: App } = await import('./App.tsx');
-    
-    createRoot(document.getElementById('root')).render(
-      React.createElement(App)
-    );
-  </script>
+      import React from 'https://esm.sh/react@18.2.0';
+      import ReactDOM from 'https://esm.sh/react-dom@18.2.0/client';
+      import App from './App.tsx';
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(React.createElement(App));
+    </script>
   </body>
 </html>

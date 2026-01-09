@@ -3,11 +3,17 @@
     {
       "source": "/(.*).tsx",
       "headers": [
-        { "key": "Content-Type", "value": "application/javascript" }
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        }
       ]
     }
   ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
