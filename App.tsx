@@ -52,3 +52,12 @@ const App: React.FC = () => {
 };
 
 export default App;
+// Mount to DOM
+if (typeof document !== 'undefined') {
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    import('react-dom/client').then((ReactDOM) => {
+      ReactDOM.createRoot(rootElement).render(<App />);
+    });
+  }
+}
