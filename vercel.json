@@ -1,18 +1,7 @@
 {
-  "headers": [
-    {
-      "source": "/(.*).tsx",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "application/javascript"
-        }
-      ]
-    }
-  ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!og-image.jpg|assets|favicon.ico).*)",
       "destination": "/index.html"
     }
   ]
