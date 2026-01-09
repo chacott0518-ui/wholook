@@ -88,6 +88,14 @@
 </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/App.tsx"></script>
+    <script type="module">
+      import React from 'react';
+      import ReactDOM from 'react-dom/client';
+      import App from './App.tsx';
+    
+      ReactDOM.createRoot(document.getElementById('root')).render(
+        React.createElement(App)
+      );
+   </script>
   </body>
 </html>
